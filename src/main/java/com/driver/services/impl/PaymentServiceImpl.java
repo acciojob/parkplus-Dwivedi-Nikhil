@@ -19,6 +19,7 @@ public class PaymentServiceImpl implements PaymentService {
     public Payment pay(Integer reservationId, int amountSent, String mode) throws Exception {
 
         Payment payment = new Payment();
+        payment.setPaymentCompleted(Boolean.TRUE);
         return payment;
     }
 }
