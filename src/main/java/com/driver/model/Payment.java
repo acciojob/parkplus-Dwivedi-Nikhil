@@ -11,10 +11,11 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Boolean paymentCompleted;
+    private boolean paymentCompleted;
     private PaymentMode paymentMode;
 
-    @OneToOne(mappedBy = "payment", cascade = CascadeType.ALL)
+    @OneToOne
+    @JoinColumn
     private Reservation reservation;
 
     public Payment(){}
