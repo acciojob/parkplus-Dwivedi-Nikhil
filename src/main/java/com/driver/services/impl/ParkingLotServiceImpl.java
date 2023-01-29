@@ -51,7 +51,7 @@ public class ParkingLotServiceImpl implements ParkingLotService {
         //REservation LIST LEFT
 
         ParkingLot parkingLot = parkingLotRepository1.findById(parkingLotId).get();
-        parkingLot.getSpotList().add(spot);// FORGOT
+      //  parkingLot.getSpotList().add(spot);// FORGOT
         spot.setParkingLot(parkingLot);
 
         spotRepository1.save(spot); //NO NEED
@@ -85,7 +85,7 @@ public class ParkingLotServiceImpl implements ParkingLotService {
     @Override
     public void deleteParkingLot(int parkingLotId) {
 
-        ParkingLot parkingLot = parkingLotRepository1.findById(parkingLotId).get(); //NEEDED ????
+       // ParkingLot parkingLot = parkingLotRepository1.findById(parkingLotId).get(); //NEEDED ????
         parkingLotRepository1.deleteById(parkingLotId);
     }
 }
